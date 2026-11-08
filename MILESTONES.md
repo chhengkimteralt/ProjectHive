@@ -30,7 +30,7 @@
 ## M1: Frontend Prototype (Week 5)
 
 ### Checklist
-- [ ] Wireframes (photo or tool) of the main screens in `docs/`
+- [x] Wireframes (photo or tool) of the main screens in `docs/`
 - [ ] Vue 3 + TypeScript app created with Vite; strict mode on; ESLint passes
 - [ ] At least 4 routes, including a detail page with a route parameter
 - [ ] At least one form with client-side validation
