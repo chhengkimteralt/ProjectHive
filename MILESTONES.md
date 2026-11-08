@@ -31,7 +31,7 @@
 
 ### Checklist
 - [x] Wireframes (photo or tool) of the main screens in `docs/`
-- [ ] Vue 3 + TypeScript app created with Vite; strict mode on; ESLint passes
+- [x] Vue 3 + TypeScript app created with Vite; strict mode on; ESLint passes
 - [ ] At least 4 routes, including a detail page with a route parameter
 - [ ] At least one form with client-side validation
 - [ ] A Pinia store and a service layer calling a mock API (json-server or local JSON)
