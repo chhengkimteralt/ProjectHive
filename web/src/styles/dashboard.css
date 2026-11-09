@@ -1,0 +1,165 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  color: var(--wood-dark);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.btn-create {
+  background-color: var(--leaf-green);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 0 #3d6944;
+  transition: transform 0.1s ease, background-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-create:hover {
+  background-color: var(--leaf-green-hover);
+  transform: translateY(-2px);
+}
+
+.btn-create:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #3d6944;
+}
+
+/* 3 cards per row */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1050px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 3px solid var(--wood-border);
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: 0 4px 12px rgba(122, 78, 50, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(122, 78, 50, 0.12);
+}
+
+/* Card header with Project Name and Role Badge on top right */
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.project-card h3 {
+  margin: 0;
+  color: var(--wood-dark);
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* Role badge on top right corner (matches cozy wood/cream web design) */
+.role-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 6px;
+  border: 1.5px solid var(--wood-border);
+  background-color: #fdfaf3;
+  color: var(--wood-dark);
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.role-badge.leader {
+  background-color: #eaf3ea;
+  border-color: var(--leaf-green);
+  color: #3f6841;
+}
+
+.role-badge.member {
+  background-color: #fdf6e7;
+  border-color: var(--honey-gold);
+  color: #7a4e32;
+}
+
+/* Description with maximum space limit (clamped to 2 lines with ellipsis) */
+.project-card p {
+  margin: 8px 0 16px 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* limits to max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 2.9em; /* prevents description from expanding further */
+}
+
+/* Small divider separating description from footer; date and view on same level */
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1.5px dashed var(--wood-border);
+}
+
+.timeline {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--wood-medium);
+}
+
+.view-link {
+  display: inline-block;
+  background-color: var(--honey-gold);
+  color: #4a3411;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 6px 16px;
+  border-radius: 8px;
+  box-shadow: 0 3px 0 #c2881b;
+  transition: transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.view-link:hover {
+  background-color: var(--honey-hover);
+  transform: translateY(-2px);
+}

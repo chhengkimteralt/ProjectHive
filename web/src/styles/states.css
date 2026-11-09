@@ -1,0 +1,16 @@
+.state-loading,
+.state-error {
+  background: var(--bg-card);
+  border: 2px dashed var(--wood-border);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.state-error {
+  border-color: #f0c4bb;
+  background-color: #fdf2f0;
+  color: #c94a29;
+}

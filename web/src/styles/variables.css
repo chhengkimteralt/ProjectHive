@@ -1,0 +1,38 @@
+:root {
+  --bg-cream: #fbf7ee;
+  --bg-card: #fffdf8;
+  --wood-dark: #533827;
+  --wood-medium: #7a4e32;
+  --wood-light: #9e6b47;
+  --wood-border: #d4bc9e;
+  
+  --leaf-green: #588b5b;
+  --leaf-green-hover: #457348;
+  --leaf-light: #e5f0e4;
+  
+  --honey-gold: #f4b436;
+  --honey-hover: #e09f22;
+  --honey-light: #fef5e0;
+
+  --text-primary: #3d2d24;
+  --text-muted: #7d6b5d;
+
+  font-family: 'Nunito', 'Comfortaa', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-cream);
+  font-size: 18px; 
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-cream);
+  background-image: radial-gradient(#eadbc8 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  zoom: 1.35;
+}
+
+main {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 36px 32px;
+}

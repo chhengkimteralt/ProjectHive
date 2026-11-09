@@ -1,0 +1,97 @@
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+.card {
+  background: var(--bg-card);
+  border: 3px solid var(--wood-border);
+  border-radius: 18px; 
+  padding: 32px;
+  box-shadow: 0 8px 20px rgba(122, 78, 50, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+  color: var(--wood-dark);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 14px 0 28px 0;
+}
+
+button,
+.btn-primary,
+.btn-secondary {
+  font: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 10px; 
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+button:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+button:active,
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(2px);
+}
+
+.btn-primary {
+  background-color: var(--leaf-green);
+  color: #ffffff;
+  box-shadow: 0 4px 0 #3d6944;
+}
+
+.btn-primary:hover {
+  background-color: var(--leaf-green-hover);
+  box-shadow: 0 4px 0 #315336;
+}
+
+.btn-primary:active {
+  box-shadow: 0 1px 0 #315336;
+}
+
+.btn-secondary {
+  background-color: var(--honey-gold);
+  color: #4a3411;
+  box-shadow: 0 4px 0 #c2881b;
+}
+
+.btn-secondary:hover {
+  background-color: var(--honey-hover);
+  box-shadow: 0 4px 0 #a36f11;
+}
+
+.btn-secondary:active {
+  box-shadow: 0 1px 0 #a36f11;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}

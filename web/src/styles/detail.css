@@ -1,0 +1,20 @@
+.project-detail .badge {
+  background-color: var(--wood-light);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--wood-medium);
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

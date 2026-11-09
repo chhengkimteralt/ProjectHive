@@ -1,0 +1,205 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "name": "Kimter Chheng",
+      "email": "kimter@itc.edu.kh",
+      "password": "$2b$10$mockhashedpassword1",
+      "is_admin": false
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "name": "Alice Sok",
+      "email": "alice@itc.edu.kh",
+      "password": "$2b$10$mockhashedpassword2",
+      "is_admin": false
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "name": "Bob Chan",
+      "email": "bob@itc.edu.kh",
+      "password": "$2b$10$mockhashedpassword3",
+      "is_admin": false
+    },
+    {
+      "id": 4,
+      "user_id": 4,
+      "name": "Dara Vann",
+      "email": "dara@itc.edu.kh",
+      "password": "$2b$10$mockhashedpassword4",
+      "is_admin": false
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "project_id": 1,
+      "name": "ProjectHive Web App",
+      "description": "Group task and milestone tracker for university students.",
+      "scope": "Build MVP with Vue 3 frontend prototype, NestJS REST API, Prisma ORM, and PostgreSQL.",
+      "start_date": "2026-10-13",
+      "end_date": "2026-12-20",
+      "created_by": 1
+    },
+    {
+      "id": 2,
+      "project_id": 2,
+      "name": "Database Systems Lab",
+      "description": "Relational database design and normalization group assignment.",
+      "scope": "Deliver ERD, SQL DDL schema, sample seed queries, and indexing report.",
+      "start_date": "2026-11-01",
+      "end_date": "2026-12-05",
+      "created_by": 2
+    },
+    {
+      "id": 3,
+      "project_id": 3,
+      "name": "Database Systems Lab",
+      "description": "Relational database design and normalization group assignment. Relational database design and normalization group assignment.Relational database design and normalization group assignment.",
+      "scope": "Deliver ERD, SQL DDL schema, sample seed queries, and indexing report.",
+      "start_date": "2026-11-01",
+      "end_date": "2026-12-05",
+      "created_by": 2
+    }
+  ],
+  "project_members": [
+    {
+      "id": 1,
+      "project_member_id": 1,
+      "project_id": 1,
+      "user_id": 1,
+      "role": "leader",
+      "status": "accepted",
+      "joined_at": "2026-10-13T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "project_member_id": 2,
+      "project_id": 1,
+      "user_id": 2,
+      "role": "member",
+      "status": "accepted",
+      "joined_at": "2026-10-14T10:30:00Z"
+    },
+    {
+      "id": 3,
+      "project_member_id": 3,
+      "project_id": 1,
+      "user_id": 3,
+      "role": "member",
+      "status": "pending",
+      "joined_at": null
+    },
+    {
+      "id": 4,
+      "project_member_id": 4,
+      "project_id": 2,
+      "user_id": 2,
+      "role": "leader",
+      "status": "accepted",
+      "joined_at": "2026-11-01T08:00:00Z"
+    },
+    {
+      "id": 5,
+      "project_member_id": 5,
+      "project_id": 2,
+      "user_id": 1,
+      "role": "member",
+      "status": "accepted",
+      "joined_at": "2026-11-02T11:15:00Z"
+    },
+    {
+      "id": 6,
+      "project_member_id": 6,
+      "project_id": 2,
+      "user_id": 4,
+      "role": "member",
+      "status": "pending",
+      "joined_at": null
+    }
+  ],
+  "milestones": [
+    {
+      "id": 1,
+      "milestone_id": 1,
+      "project_id": 1,
+      "name": "M1: Frontend Prototype",
+      "description": "Build Vue 3 SPA with 4+ routes, Pinia store, validated form, and mock API.",
+      "start_date": "2026-10-26",
+      "end_date": "2026-11-09"
+    },
+    {
+      "id": 2,
+      "milestone_id": 2,
+      "project_id": 1,
+      "name": "M2: Backend API",
+      "description": "Implement NestJS modules, Prisma schema, migrations, and CRUD endpoints.",
+      "start_date": "2026-11-10",
+      "end_date": "2026-11-23"
+    },
+    {
+      "id": 3,
+      "milestone_id": 3,
+      "project_id": 2,
+      "name": "Phase 1: ERD & Schema",
+      "description": "Design entity relationships and write PostgreSQL DDL scripts.",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-15"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "task_id": 1,
+      "milestone_id": 1,
+      "title": "Draw screen wireframes in docs/",
+      "description": "Create wireframes for project dashboard, detail, tasks, and invitations.",
+      "deadline": "2026-11-05",
+      "status": "complete",
+      "assigned_to": 1
+    },
+    {
+      "id": 2,
+      "task_id": 2,
+      "milestone_id": 1,
+      "title": "Setup Vue Router and Pinia Store",
+      "description": "Configure 4 routes including /projects/:id and connect to json-server.",
+      "deadline": "2026-11-09",
+      "status": "in progress",
+      "assigned_to": 1
+    },
+    {
+      "id": 3,
+      "task_id": 3,
+      "milestone_id": 1,
+      "title": "Build Create Project Form Validation",
+      "description": "Validate required fields and ensure end_date is after start_date.",
+      "deadline": "2026-11-01",
+      "status": "pending",
+      "assigned_to": 2
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "milestone_id": 2,
+      "title": "Draft API Contract and ERD",
+      "description": "Document all REST endpoints in docs/api.md before writing NestJS code.",
+      "deadline": "2026-11-18",
+      "status": "pending",
+      "assigned_to": 1
+    },
+    {
+      "id": 5,
+      "task_id": 5,
+      "milestone_id": 3,
+      "title": "Normalize tables to 3NF",
+      "description": "Review all entities and remove transitive dependencies.",
+      "deadline": "2026-11-12",
+      "status": "in progress",
+      "assigned_to": 5
+    }
+  ]
+}
