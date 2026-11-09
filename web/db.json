@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "user_id": 1,
       "name": "Kimter Chheng",
       "email": "kimter@itc.edu.kh",
@@ -9,7 +9,7 @@
       "is_admin": false
     },
     {
-      "id": 2,
+      "id": "2",
       "user_id": 2,
       "name": "Alice Sok",
       "email": "alice@itc.edu.kh",
@@ -17,7 +17,7 @@
       "is_admin": false
     },
     {
-      "id": 3,
+      "id": "3",
       "user_id": 3,
       "name": "Bob Chan",
       "email": "bob@itc.edu.kh",
@@ -25,7 +25,7 @@
       "is_admin": false
     },
     {
-      "id": 4,
+      "id": "4",
       "user_id": 4,
       "name": "Dara Vann",
       "email": "dara@itc.edu.kh",
@@ -35,7 +35,7 @@
   ],
   "projects": [
     {
-      "id": 1,
+      "id": "1",
       "project_id": 1,
       "name": "ProjectHive Web App",
       "description": "Group task and milestone tracker for university students.",
@@ -45,7 +45,7 @@
       "created_by": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "project_id": 2,
       "name": "Database Systems Lab",
       "description": "Relational database design and normalization group assignment.",
@@ -55,7 +55,7 @@
       "created_by": 2
     },
     {
-      "id": 3,
+      "id": "3",
       "project_id": 3,
       "name": "Database Systems Lab",
       "description": "Relational database design and normalization group assignment. Relational database design and normalization group assignment.Relational database design and normalization group assignment.",
@@ -63,11 +63,20 @@
       "start_date": "2026-11-01",
       "end_date": "2026-12-05",
       "created_by": 2
+    },
+    {
+      "name": "Planner for planners",
+      "description": "Planner saves you time and keep you stress free.",
+      "scope": "bla bla bla",
+      "start_date": "2026-11-08",
+      "end_date": "2026-11-27",
+      "created_by": 1,
+      "id": "g1fROJQlx50"
     }
   ],
   "project_members": [
     {
-      "id": 1,
+      "id": "1",
       "project_member_id": 1,
       "project_id": 1,
       "user_id": 1,
@@ -76,7 +85,7 @@
       "joined_at": "2026-10-13T09:00:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "project_member_id": 2,
       "project_id": 1,
       "user_id": 2,
@@ -85,7 +94,7 @@
       "joined_at": "2026-10-14T10:30:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "project_member_id": 3,
       "project_id": 1,
       "user_id": 3,
@@ -94,7 +103,7 @@
       "joined_at": null
     },
     {
-      "id": 4,
+      "id": "4",
       "project_member_id": 4,
       "project_id": 2,
       "user_id": 2,
@@ -103,7 +112,7 @@
       "joined_at": "2026-11-01T08:00:00Z"
     },
     {
-      "id": 5,
+      "id": "5",
       "project_member_id": 5,
       "project_id": 2,
       "user_id": 1,
@@ -112,7 +121,7 @@
       "joined_at": "2026-11-02T11:15:00Z"
     },
     {
-      "id": 6,
+      "id": "6",
       "project_member_id": 6,
       "project_id": 2,
       "user_id": 4,
@@ -123,7 +132,7 @@
   ],
   "milestones": [
     {
-      "id": 1,
+      "id": "1",
       "milestone_id": 1,
       "project_id": 1,
       "name": "M1: Frontend Prototype",
@@ -132,7 +141,7 @@
       "end_date": "2026-11-09"
     },
     {
-      "id": 2,
+      "id": "2",
       "milestone_id": 2,
       "project_id": 1,
       "name": "M2: Backend API",
@@ -141,7 +150,7 @@
       "end_date": "2026-11-23"
     },
     {
-      "id": 3,
+      "id": "3",
       "milestone_id": 3,
       "project_id": 2,
       "name": "Phase 1: ERD & Schema",
@@ -152,7 +161,7 @@
   ],
   "tasks": [
     {
-      "id": 1,
+      "id": "1",
       "task_id": 1,
       "milestone_id": 1,
       "title": "Draw screen wireframes in docs/",
@@ -162,7 +171,7 @@
       "assigned_to": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "task_id": 2,
       "milestone_id": 1,
       "title": "Setup Vue Router and Pinia Store",
@@ -172,7 +181,7 @@
       "assigned_to": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "task_id": 3,
       "milestone_id": 1,
       "title": "Build Create Project Form Validation",
@@ -182,7 +191,7 @@
       "assigned_to": 2
     },
     {
-      "id": 4,
+      "id": "4",
       "task_id": 4,
       "milestone_id": 2,
       "title": "Draft API Contract and ERD",
@@ -192,7 +201,7 @@
       "assigned_to": 1
     },
     {
-      "id": 5,
+      "id": "5",
       "task_id": 5,
       "milestone_id": 3,
       "title": "Normalize tables to 3NF",
@@ -201,5 +210,6 @@
       "status": "in progress",
       "assigned_to": 5
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

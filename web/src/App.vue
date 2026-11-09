@@ -12,7 +12,6 @@ const currentUser = ref({
 })
 
 const route = useRoute()
-// Dynamically active based on current page
 const isProjectsActive = computed(() => route.path === '/' || route.path.startsWith('/projects'))
 const isTasksActive = computed(() => route.path === '/my-tasks')
 </script>

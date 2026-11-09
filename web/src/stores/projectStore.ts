@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import type { Project } from '../types/project'
-import { projectService } from '../services/projectService'
+import { projectService, type CreateProjectInput } from '../services/projectService'
 
 export const useProjectStore = defineStore('projects', () => {
   const projects = ref<Project[]>([])
@@ -20,10 +20,26 @@ export const useProjectStore = defineStore('projects', () => {
     }
   }
 
+  async function createProject(newProjectData: CreateProjectInput): Promise<Project> {
+    isLoading.value = true
+    error.value = null
+    try {
+      const created = await projectService.create(newProjectData)
+      projects.value.push(created)
+      return created
+    } catch (err) {
+      error.value = err instanceof Error ? err.message : 'Failed to create project'
+      throw err
+    } finally {
+      isLoading.value = false
+    }
+  }
+
   return {
     projects,
     isLoading,
     error,
-    fetchProjects
+    fetchProjects,
+    createProject
   }
 })
