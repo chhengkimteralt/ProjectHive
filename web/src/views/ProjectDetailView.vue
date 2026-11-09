@@ -78,7 +78,6 @@ watch(() => props.id, () => {
   <div class="project-detail-layout">
 
     <RouterLink to="/" class="back-link">
-      <span>←</span>
       <span>Back to Dashboard</span>
     </RouterLink>
 
