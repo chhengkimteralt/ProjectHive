@@ -71,7 +71,6 @@
   box-shadow: 0 6px 16px rgba(122, 78, 50, 0.12);
 }
 
-/* Card header with Project Name and Role Badge on top right */
 .project-card-header {
   display: flex;
   justify-content: space-between;
@@ -88,7 +87,6 @@
   line-height: 1.3;
 }
 
-/* Role badge on top right corner (matches cozy wood/cream web design) */
 .role-badge {
   font-size: 0.78rem;
   font-weight: 800;

@@ -1,20 +1,461 @@
-.project-detail .badge {
-  background-color: var(--wood-light);
-  color: #ffffff;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-weight: 800;
-  font-size: 0.9rem;
+/* ========================================================
+   Project Detail Page - Cozy Animal Crossing / Hive Theme
+   ======================================================== */
+
+.project-detail-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
+/* Cute Signpost-Style Back Link */
 .back-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--wood-medium);
+  background-color: #f7efe2;
+  border: 2px solid #e2cfb7;
+  border-radius: 999px;
+  padding: 8px 18px;
   text-decoration: none;
-  font-weight: 700;
-  margin-bottom: 16px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  box-shadow: 0 3px 8px rgba(122, 78, 50, 0.06);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: fit-content;
 }
 
 .back-link:hover {
-  text-decoration: underline;
+  color: var(--wood-dark);
+  background-color: #fcf6ec;
+  border-color: var(--wood-medium);
+  transform: translateX(-4px) scale(1.02);
+  box-shadow: 0 5px 12px rgba(122, 78, 50, 0.12);
+  text-decoration: none;
+}
+
+/* Cozy Bulletin Board Summary Card */
+.project-summary-card {
+  position: relative;
+  background: #fffefb;
+  background-image: radial-gradient(#eddcc8 1px, transparent 1px);
+  background-size: 20px 20px;
+  border: 3.5px solid var(--wood-border);
+  border-radius: 26px;
+  padding: 34px;
+  box-shadow: 0 10px 28px rgba(122, 78, 50, 0.08), 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.project-info-block {
+  flex: 1;
+  min-width: 280px;
+}
+
+.project-detail-title {
+  margin: 0 0 10px 0;
+  font-size: 2.1rem;
+  color: var(--wood-dark);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+/* Cute Date Pill with leaf tone */
+.project-dates-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #5d4037;
+  background-color: #fef7e6;
+  border: 1.5px solid #eed6a8;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(122, 78, 50, 0.04);
+}
+
+.project-detail-desc {
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 18px 0;
+  font-weight: 600;
+}
+
+/* ========================================================
+   Creative Animal Crossing "Field Blueprint / Scope" Note
+   ======================================================== */
+.project-scope-box {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fffdf7;
+  border: 2.5px dashed #d8c2a3;
+  border-radius: 20px;
+  padding: 22px 26px 18px 26px;
+  margin-top: 6px;
+  box-shadow: 0 6px 18px rgba(122, 78, 50, 0.06), inset 0 0 0 1px #fffbee;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+
+.project-scope-box:hover {
+  transform: translateY(-3px) rotate(0.2deg);
+  box-shadow: 0 10px 22px rgba(122, 78, 50, 0.1);
+}
+
+/* Animal Crossing Pastel Leaf Washi Tape strip on top corner */
+.project-scope-box::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 28px;
+  width: 74px;
+  height: 20px;
+  background: #c5e4be; /* Soft pastel matcha/leaf green */
+  border-left: 3px dashed rgba(80, 120, 75, 0.35);
+  border-right: 3px dashed rgba(80, 120, 75, 0.35);
+  border-radius: 3px;
+  transform: rotate(-3deg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.scope-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.scope-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 900;
+  color: var(--wood-dark);
+  background: #faeed4;
+  border: 1.5px solid #e5cfa8;
+  padding: 4px 14px;
+  border-radius: 999px;
+  box-shadow: 0 1px 3px rgba(122, 78, 50, 0.05);
+}
+
+.scope-leaf {
+  font-size: 1.25rem;
+  display: inline-block;
+  animation: leaf-sway 3.2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes leaf-sway {
+  0% { transform: rotate(-8deg) scale(1); }
+  50% { transform: rotate(5deg) scale(1.08); }
+  100% { transform: rotate(12deg) scale(1.02); }
+}
+
+.scope-text {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Animal Crossing Pillow Buttons */
+.project-header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary-outline {
+  background-color: #ffffff;
+  color: var(--wood-dark);
+  border: 2.5px solid var(--wood-border);
+  border-bottom: 4px solid var(--wood-border);
+  padding: 10px 22px;
+  border-radius: 999px; /* Bubbly pill shape */
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 3px 8px rgba(122, 78, 50, 0.06);
+}
+
+.btn-secondary-outline:hover {
+  background-color: #fff9ee;
+  border-color: var(--wood-medium);
+  border-bottom-color: var(--wood-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(122, 78, 50, 0.12);
+}
+
+.btn-secondary-outline:active {
+  transform: translateY(2px);
+  border-bottom-width: 2.5px;
+}
+
+/* ========================================================
+   Milestones & Recipe Cards
+   ======================================================== */
+.milestones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.milestones-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.milestones-section-title {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--wood-dark);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Milestone Recipe Card */
+.milestone-card {
+  position: relative;
+  background: #fffdf9;
+  border: 3px solid var(--wood-border);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 6px 18px rgba(122, 78, 50, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.milestone-card:hover {
+  box-shadow: 0 8px 22px rgba(122, 78, 50, 0.09);
+}
+
+.milestone-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  border-bottom: 2px dashed #eedcc8;
+}
+
+.milestone-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.milestone-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--wood-dark);
+  margin: 0;
+}
+
+.milestone-dates {
+  font-size: 0.88rem;
+  color: #7d6b5d;
+  font-weight: 800;
+  background: #fbf4ea;
+  border: 1px solid #ebdecb;
+  padding: 3px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.milestone-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 4px 0 0 0;
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  border-radius: 999px;
+  border-bottom: 3.5px solid rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================================
+   Tasks Table (Cozy Bulletin List)
+   ======================================================== */
+.task-table-wrapper {
+  overflow-x: auto;
+  border-radius: 16px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #ecd8c2;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.task-table th {
+  background-color: #fbf5ea;
+  color: var(--wood-dark);
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 2px solid #ecd8c2;
+  letter-spacing: 0.3px;
+}
+
+.task-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f6ecdf;
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  vertical-align: middle;
+}
+
+.task-table tr:last-child td {
+  border-bottom: none;
+}
+
+.task-table tr:hover td {
+  background-color: #fefcf7;
+}
+
+.task-title-cell {
+  font-weight: 800;
+  color: var(--wood-dark);
+}
+
+.task-desc-subtext {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.task-assignee-cell {
+  font-weight: 700;
+  color: var(--wood-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-assignee-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fbeed2;
+  color: var(--wood-dark);
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  border: 1.5px solid #edd39c;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.task-deadline-cell {
+  color: var(--text-muted);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ========================================================
+   Animal Crossing Soft Pill Status Badges
+   ======================================================== */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.status-complete {
+  background-color: #e5f5e0;
+  color: #276735;
+  border: 1.5px solid #bce6b6;
+}
+
+.status-in-progress {
+  background-color: #fef4dc;
+  color: #9e6400;
+  border: 1.5px solid #f6db95;
+}
+
+.status-pending {
+  background-color: #f4eee5;
+  color: #6e5543;
+  border: 1.5px solid #e1d3c1;
+}
+
+/* Empty States */
+.empty-box {
+  background: #fffdf9;
+  border: 2.5px dashed var(--wood-border);
+  border-radius: 20px;
+  padding: 34px 20px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.empty-box p {
+  margin: 0 0 16px 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--wood-medium);
+}
+
+.empty-tasks {
+  padding: 22px;
+  text-align: center;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+  background-color: #fefcf7;
+  border-radius: 12px;
+  border: 1.5px dashed #ebd8c6;
+}
+
+/* Error Container */
+.detail-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 36px 24px;
+  border-radius: 22px;
 }
