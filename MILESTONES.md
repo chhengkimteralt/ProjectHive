@@ -32,14 +32,15 @@
 ### Checklist
 - [x] Wireframes (photo or tool) of the main screens in `docs/`
 - [x] Vue 3 + TypeScript app created with Vite; strict mode on; ESLint passes
-- [ ] At least 4 routes, including a detail page with a route parameter
-- [ ] At least one form with client-side validation
-- [ ] A Pinia store and a service layer calling a mock API (json-server or local JSON)
-- [ ] Loading, empty and error states visible
+- [x] At least 4 routes, including a detail page with a route parameter
+- [x] At least one form with client-side validation
+- [x] A Pinia store and a service layer calling a mock API (json-server or local JSON)
+- [x] Loading, empty and error states visible
 
 ### Explain your design
 **What state lives in the store and what stays inside a component? Why?**
-*(To be completed during M1 submission)*
+
+I put the project list and the loading/error flags inside the Pinia store because those are shared between multiple views. For example, the dashboard shows the list of projects, and after I create a new project in the form it needs to show up there too, so it makes sense to keep it in one place that both views can access. Things like the form field values and the validation error messages I kept inside the component using `ref`. Those are only needed while the user is on the create project page, so there is no reason to put them in the store. If the user navigates away, those values should just reset anyway. Same idea for the loading spinner on the detail page, I kept that as a local `ref` inside `ProjectDetailView` because only that page needs to know if it is currently fetching a single project.
 
 ---
 

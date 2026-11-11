@@ -39,12 +39,13 @@ export const projectService = {
     return response.json()
   },
 
-  async getMilestones(projectId: string | number): Promise<Milestone[]> {
+  async getMilestones(projectId?: string | number): Promise<Milestone[]> {
     const response = await fetch(`${BASE_URL}/milestones`)
     if (!response.ok) {
       throw new Error(`Failed to fetch milestones (Status: ${response.status})`)
     }
     const all: Milestone[] = await response.json()
+    if (!projectId) return all
     return all.filter((m) => String(m.project_id) === String(projectId))
   },
 
@@ -60,6 +61,18 @@ export const projectService = {
     const response = await fetch(`${BASE_URL}/users`)
     if (!response.ok) {
       throw new Error(`Failed to fetch users (Status: ${response.status})`)
+    }
+    return response.json()
+  },
+
+  async updateTaskStatus(taskId: number | string, newStatus: string): Promise<Task> {
+    const response = await fetch(`${BASE_URL}/tasks/${taskId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status: newStatus })
+    })
+    if (!response.ok) {
+      throw new Error(`Failed to update task (Status: ${response.status})`)
     }
     return response.json()
   }
